@@ -1,7 +1,3 @@
-# Local training pipeline for "himanava / Elderly-care-system"
-
-This is the local training pipeline (based on Keras / TensorFlow) for your Edge Impulse project [himanava / Elderly-care-system](http://localhost:4800/studio/372842) (http://localhost:4800/studio/372842). Use it to train your model locally or run experiments. Once you're done with experimentation you can push the model back into Edge Impulse, and retrain from there.
-
 ## Running the pipeline
 
 You run this pipeline via Docker. This encapsulates all dependencies and packages for you.
@@ -12,23 +8,23 @@ You run this pipeline via Docker. This encapsulates all dependencies and package
 2. Open a command prompt or terminal window.
 3. Build the container:
 
-    ```
-    $ docker build -t custom-block-372842 .
-    ```
+   ```
+   $ docker build -t custom-block-372842 .
+   ```
 
 4. Train your model:
 
-    **macOS, Linux**
+   **macOS, Linux**
 
-    ```
-    $ docker run --rm -v $PWD:/scripts custom-block-372842 --data-directory data --out-directory out
-    ```
+   ```
+   $ docker run --rm -v $PWD:/scripts custom-block-372842 --data-directory data --out-directory out
+   ```
 
-    **Windows**
+   **Windows**
 
-    ```
-    $ docker run --rm -v "%cd%":/scripts custom-block-372842 --data-directory data --out-directory out
-    ```
+   ```
+   $ docker run --rm -v "%cd%":/scripts custom-block-372842 --data-directory data --out-directory out
+   ```
 
 5. This will write your model (in TFLite, Saved Model and H5 format) to the `out/` directory.
 
@@ -48,9 +44,9 @@ To get up-to-date data from your project:
 2. Open a command prompt or terminal window.
 3. Fetch new data via:
 
-    ```
-    $ edge-impulse-blocks runner --download-data data/
-    ```
+   ```
+   $ edge-impulse-blocks runner --download-data data/
+   ```
 
 ## Pushing the block back to Edge Impulse
 
@@ -58,8 +54,8 @@ You can also push this block back to Edge Impulse, that makes it available like 
 
 1. Push the block:
 
-    ```
-    $ edge-impulse-blocks push
-    ```
+   ```
+   $ edge-impulse-blocks push
+   ```
 
 2. The block is now available under any of your projects via **Create impulse > Add new learning block**.
